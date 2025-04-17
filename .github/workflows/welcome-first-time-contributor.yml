@@ -8,6 +8,8 @@ on:
     types:
       - opened
 
+
+
 jobs:
   welcome:
     name: Post welcome message
