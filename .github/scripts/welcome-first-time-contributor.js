@@ -7,6 +7,8 @@ async function run() {
 
   
 
+
+  
   const issueMessage = `Welcome to Accord. Thanks a lot for reporting your first issue. Please check out our [contributors guide](https://github.com/accordproject/techdocs/blob/main/CONTRIBUTING.md).<br />Keep in mind there are also other channels you can use to interact with the Accord community. For more details check out our [Discord](https://discord.com/invite/Zm99SKhhtA).`;
 
   const prMessage = `Welcome to Accord. Thanks a lot for creating your first pull request. Please check out our [contributors guide](https://github.com/accordproject/techdocs/blob/main/CONTRIBUTING.md).<br />Keep in mind there are also other channels you can use to interact with the Accord community. For more details check out our [Discord](https://discord.com/invite/Zm99SKhhtA).`;
