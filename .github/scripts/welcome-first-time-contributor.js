@@ -1,15 +1,16 @@
+// .github/scripts/welcome.js
+
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-
 async function run() {
-  const context = _context;
+  const context = github.context;
 
   const issueMessage = `Welcome to Accord. Thanks a lot for reporting your first issue. Please check out our [contributors guide](https://github.com/accordproject/techdocs/blob/main/CONTRIBUTING.md).<br />Keep in mind there are also other channels you can use to interact with the Accord community. For more details check out our [Discord](https://discord.com/invite/Zm99SKhhtA).`;
 
   const prMessage = `Welcome to Accord. Thanks a lot for creating your first pull request. Please check out our [contributors guide](https://github.com/accordproject/techdocs/blob/main/CONTRIBUTING.md).<br />Keep in mind there are also other channels you can use to interact with the Accord community. For more details check out our [Discord](https://discord.com/invite/Zm99SKhhtA).`;
-  const token=process.env.GITHUB_TOKEN;
-  const octokit = getOctokit(token);
+   let token=process.env.GITHUB_TOKEN;
+  const octokit = github.getOctokit(token);
   const isIssue = !!context.payload.issue;
   let isFirstContribution;
 
@@ -68,4 +69,4 @@ async function run() {
   }
 }
 
-run().catch(err => setFailed(err.message));
+run().catch(err => core.setFailed(err.message));
