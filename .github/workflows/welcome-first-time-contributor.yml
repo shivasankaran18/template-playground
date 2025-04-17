@@ -25,7 +25,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Run welcome script
-        run: node ../scripts/welcome-first-time-contributor.js
+        run: node .github/scripts/welcome-first-time-contributor.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
